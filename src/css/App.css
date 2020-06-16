@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
+body{
+  background-color: #eee;
+}
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  display:        flex;
+  flex-direction: row;
+  align-items:    stretch;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  width:100%;
+  transition: 1s;
+  transition-property: left;
+}
+.App.condensed{
+  left: -230px;
+}
+.App.condensed .sidebar.condensed a span .text, .App.condensed .navbar .brandName{
+  display: none;
+}
+.App.condensed .sidebar.condensed a i, .App.condensed .sidebar.condensed .navbar i{
+  margin-left: 230px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar{
+  width: 300px;
+  flex: 0 0 auto;
+  left: 0;
+  background-color: #272848;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  height: 80px;
+  -moz-box-shadow:    0 2px 5px -2px #151733;
+  -webkit-box-shadow: 0 2px 5px -2px #151733;
+  box-shadow: 0 2px 5px -2px #151733;
+}
+
+.sidebar a{
+  font-family: sans-serif;
+  font-size: 1.1em;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  color: #b1b1b1;
+  padding: 10px;
+  display: block;
+  padding-left: 20px;
+  border-bottom: 1px solid #313255;
+}
+.sidebar a i{
+  color: #b1b1b1;
+}
+.main{
+  left: 300px;
+  width: 100%;
+}
+.sidebar a.active{
+  background-color: #542ee0;
+}
+.sidebar a .text{
+  padding-left: 10px;
+}
+.sidebar a span{
+  display: flex;
+  flex-direction: row;
+}
+.sidebar ul li i{
+  color: #eee;
+  font-size: 0.8em;
+}
+.sidebar .navbar i{
+  color: #eee;
+  font-size: 1.8em;
+}
+.sidebar .navbar{
+  background-color: #1c1d33;
+  
+}
+.container .navbar{
+  margin-bottom: 10px;
+}
+.container .navbar i{
+  cursor: pointer;
+  transition-property: color;
+}
+.container .navbar i:hover{
+  color: #151733;
+}
+
+.sidebar .navbar .brandName{
+  font-family: 'Lato' sans-serif;
+  font-weight: bold;
+  color: #eee;
+  font-size: 1.8em;
+  padding: 0px 10px;
+  margin: 0;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+input[type='checkbox']{
+  width:40px;
+}
+
+.criteria {
+  text-align: left;
+}
+
+.card{
+  width: 100vh;
+}
+.h5 {
+  font-size: 1.2rem;
+}
+.headTag{
+  font-size: 3.4rem;
+  margin: 0.2em;
+}
+.colorTheme, i{
+  color: #00695c;
+}
+
+.react-rater-star.is-active {
+  color: #f44336;
+}
+.card .card-action {
+  padding: 5px 24px;
+  text-align: center;
+}
+
+.timerP{
+  font-size: 1em;
+  text-align: left;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.chip{
+  color: snow;
+}
+.badge i, .btn-large i{
+  font-size: 1.2em;
+  color: snow;
+  padding-right: 0.5em;
+}
+.loader{
+  padding-top: 50px;
+}
+.widget{
+  background-color: #35367f;
+  width: auto;
+  margin: 10px;
+}
+.widget i {
+  font-size: 5em;
+  color: #eee;
+}
+.widget .title{
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: Lato;
+  color: #eee;
+}
+.widget span{
+  color: #eee;
+  font-size: 3em;
+}
+
+.textwhite{
+  color: snow;
+}
+.left{
+  text-align: left;
+}
+.toTheLeft{
+  justify-content: left;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hava-progressbar{
+  color: #000!important;
+  background-color: #f3f2f2;
+  border: 1px solid #c1c1c1;
+}
+.rounded-bar{
+  border-radius: 20px;
+  padding: 3px;
+}
+.green-bar{
+  color: #fff!important;
+  background-color: #4CAF50!important;
+}
+.the-progress{
+  animation: animate-positive 3s;
+  text-align: end;
+}
+.hava-progressbar .the-progress span{
+  border-radius: 10px;
+  background-color: #e4e2e2;
+  color: #4CAF50;
+  margin: 2px;
+  font-weight: bold;
+  padding: 4px;
+  font-size: 0.8em;
+  border: 1px solid #4CAF50;
+}
+
+@keyframes animate-positive{
+  0%{
+    width: 0%;
+  }
+}
